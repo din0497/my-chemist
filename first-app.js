@@ -1,1 +1,3 @@
-console.log('Hello from node!')
+const fs = require('fs');
+
+fs.writeFileSync('hello.txt', 'hello from node')
