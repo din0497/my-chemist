@@ -42,7 +42,7 @@ const requestHandler = (req, res) => {
   const method = req.method;
 
   if (url === "/") {
-      res.setHeader('Content-Type', 'text/html')
+    res.setHeader("Content-Type", "text/html");
     res.write(
       "<html > <head> <title>Assignment!</title></head><body><h1>Hello world, i am learning Node.js</h1><form action='create-user' method='POST'><input type='text' name='users'><button type='submit'>Submit</button></form></body></html>"
     );
@@ -67,9 +67,11 @@ const requestHandler = (req, res) => {
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split("=")[1];
       console.log({ parsedBody, message });
-      return res.end()
+      return res.end();
     });
     res.statusCode = 302;
+    res.setHeader("Location", "/");
+    res.end();
   }
 };
 
