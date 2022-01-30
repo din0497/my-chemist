@@ -69,6 +69,7 @@ const requestHandler = (req, res) => {
       console.log({ parsedBody, message });
       return res.end()
     });
+    res.statusCode = 302;
   }
 };
 
