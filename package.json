@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/din0497/node/issues"
   },
-  "homepage": "https://github.com/din0497/node#readme"
+  "homepage": "https://github.com/din0497/node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
