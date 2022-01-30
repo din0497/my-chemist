@@ -36,3 +36,10 @@
 //   res.end();
 // };
 // module.exports = requestHandler;
+
+
+const requestHandler = (req, res) => {
+
+}
+
+module.exports = requestHandler
