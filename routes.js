@@ -43,7 +43,7 @@ const requestHandler = (req, res) => {
 
   if (url === "/") {
     res.write(
-      "<html > <head> <title>Assignment!</title></head><body><h1>Hello world, i am learning Node.js</h1></body></html>"
+      "<html > <head> <title>Assignment!</title></head><body><h1>Hello world, i am learning Node.js</h1><form action='create-user' method='POST'><input type='text' name='users'><button type='submit'>Submit</button></form></body></html>"
     );
     return res.end();
   }
