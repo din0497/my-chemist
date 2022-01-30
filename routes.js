@@ -37,9 +37,22 @@
 // };
 // module.exports = requestHandler;
 
-
 const requestHandler = (req, res) => {
+  const url = req.url;
+  const method = req.method;
 
-}
+  if (url === "/") {
+    res.write(
+      "<html > <head> <title>Assignment!</title></head><body><h1>Hello world, i am learning Node.js</h1></body></html>"
+    );
+    return res.end();
+  }
+  if (url === "/users") {
+    res.write(
+      "<html > <head> <title>Assignment!</title></head><body><ul><li>User1</li><li>User2</li><li>User3</li></ul></body></html>"
+    );
+    return res.end();
+  }
+};
 
-module.exports = requestHandler
+module.exports = requestHandler;
