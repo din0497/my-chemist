@@ -53,6 +53,15 @@ const requestHandler = (req, res) => {
     );
     return res.end();
   }
+
+  if(url === '/create-user' && method === 'POST'){
+      const body = []
+
+      req.on('data',(chunk)=>{
+          console.log(chunk);
+          body.push(chunk)
+      })
+  }
 };
 
 module.exports = requestHandler;
