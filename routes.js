@@ -15,7 +15,6 @@ const requestHandler = (req, res) => {
   if (url === "/message" && method === "POST") {
     const body = [];
     req.on("data", (chunk) => {
-      console.log(chunk);
       body.push(chunk);
     });
     req.on("end", () => {
@@ -30,7 +29,7 @@ const requestHandler = (req, res) => {
   }
   res.setHeader("Content-Type", "text/html");
   res.write("<html>");
-  res.write("<head><title> My first node </title></head?");
+  res.write("<head><title> NPM </title></head?");
   res.write("<body><h1> Hello from my Node js</h1></body>");
   res.write("</html>");
   res.end();
