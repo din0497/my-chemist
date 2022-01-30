@@ -66,6 +66,7 @@ const requestHandler = (req, res) => {
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split("=")[1];
       console.log({ parsedBody, message });
+      return res.end()
     });
   }
 };
