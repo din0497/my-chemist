@@ -16,12 +16,12 @@ const express = require("express");
 
 const app = express();
 
-app.use((req, res, next) => {
+app.use('/users',(req, res, next) => {
     console.log("I am assignment");
-    next()
+    res.send("<ul><li>users</li></ul>");
   });
 
-app.use((req, res, next) => {
+app.use('/' ,(req, res, next) => {
   console.log("I am assignment2");
   res.send("<h1>Hello world!</h1>");
 });
