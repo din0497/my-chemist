@@ -2,12 +2,14 @@ const express = require("express");
 
 const app = express();
 
-app.use('/add-product',(req, res, next) => {
+app.use("/add-product", (req, res, next) => {
   res.send("<h1>THE ADD PRODUCT!</h1>");
 });
 
-app.use('/',(req, res, next) => {
-  res.send("<h1>Hello from Express!</h1>");
+app.use("/", (req, res, next) => {
+  res.send(
+    "<form action='/product' method='POST'><input type='text' name='title'/><button type='submit'>Submit</button></form>"
+  );
 });
 
 app.listen(3000);
@@ -22,11 +24,9 @@ app.listen(3000);
 //     res.send("<p>/////users</p>")
 // })
 
-
 // app.use('/',(req,res, next) => {
 //     console.log('/ middleware');
 //     res.send("<p>/////</p>")
 // })
-
 
 // app.listen(3000);
