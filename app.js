@@ -6,7 +6,7 @@ const expressHbs = require('express-handlebars')
 
 const app = express();
 
-app.engine('handlebars', expressHbs())
+app.engine('handlebars', expressHbs({layoutsDir:'views/layout',defaultLayout:'main-layout'}))
 app.set('view engine', 'handlebars')
 app.set('views', 'views')
 
