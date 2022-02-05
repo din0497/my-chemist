@@ -8,6 +8,7 @@ const app = express();
 app.set('view engine', 'ejs')
 app.set('views', 'views')
 
+const productsController = require('./controllers/product')
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
@@ -17,8 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/admin', adminData);
 app.use(shopRoutes);
 
-app.use((req, res, next) => {
-    res.status(404).render('404', {docTitle: "404" });
-});
+app.use(productsController.page404);
 
 app.listen(3000);
