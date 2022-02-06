@@ -8,7 +8,7 @@ const app = express();
 app.set('view engine', 'ejs')
 app.set('views', 'views')
 
-const productsController = require('./controllers/products')
+const productsController = require('./controllers/shop')
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
